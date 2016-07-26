@@ -4,4 +4,7 @@
   <p>Title: <%= record.title %></p>
   <p>Artist: <%= record.artist %></p>
   <img src="<%= record.cover_art %>">
+  <br>
+  <a href="/records/<%= record.id %>">Show page</a><br> <!-- bad -->
+  <%= link_to "Show page", record_path(record) %>
 <% end %>
